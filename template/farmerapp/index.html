@@ -1,0 +1,268 @@
+{% extends 'farmerapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ##### Hero Area Start ##### -->
+<div class="hero-area">
+    <div class="welcome-slides owl-carousel">
+        <!-- Single Welcome Slides -->
+        <div class="single-welcome-slides bg-img bg-overlay jarallax"
+            style="background-image:url({% static 'img/bg-img/x1.jpg.pagespeed.ic.wyc5PKaX6M.jpg' %})">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="welcome-content">
+                            <h2 data-animation="fadeInUp" data-delay="200ms">The hearth of the farm is the true
+                                center of our universe.</h2>
+                            <p data-animation="fadeInUp" data-delay="400ms">A farmer might own the farmed land or might work as a laborer on land owned by others, but in most developed economies, a farmer is usually a farm owner, while employees of the farm are known as farm workers, or farmhands.</p>
+                            <a href="{% url 'contact' %}" class="btn famie-btn mt-4" data-animation="bounceInUp"
+                                data-delay="600ms">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Welcome Slides -->
+        <div class="single-welcome-slides bg-img bg-overlay jarallax"
+            style="background-image:url({% static 'img/bg-img/x7.jpg.pagespeed.ic.aNXlb2Zx38.jpg' %})">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="welcome-content">
+                            <h2 data-animation="fadeInDown" data-delay="200ms">Fresh Vegetables are Health</h2>
+                            <p data-animation="fadeInDown" data-delay="400ms">Vegetables are well-known for being good for your health. Most vegetables are low in calories but high in vitamins, minerals and fiber. However, some vegetables stand out from the rest with additional proven health benefits, such as the ability to fight inflammation or reduce the risk of disease.</p>
+                            <a href="{% url 'contact' %}" class="btn famie-btn mt-4" data-animation="bounceInDown"
+                                data-delay="600ms">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Hero Area End ##### -->
+<!-- ##### Famie Benefits Area Start ##### -->
+<section class="famie-benefits-area section-padding-100-0 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="benefits-thumbnail mb-50">
+                    <img src="{% static 'img/bg-img/x2.jpg.pagespeed.ic.UTb454Ddpn.jpg' %}" alt=""
+                        data-pagespeed-url-hash="4105877291"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Single Benefits Area -->
+            <div class="col-12 col-sm-4 col-lg">
+                <div class="single-benefits-area wow fadeInUp mb-50" data-wow-delay="100ms">
+                    <img src="data:image/png;base64,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"
+                        alt="" data-pagespeed-url-hash="4213393529"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <h5>Best Services</h5>
+                </div>
+            </div>
+            <!-- Single Benefits Area -->
+            <div class="col-12 col-sm-4 col-lg">
+                <div class="single-benefits-area wow fadeInUp mb-50" data-wow-delay="300ms">
+                    <img src="data:image/png;base64,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"
+                        alt="" data-pagespeed-url-hash="1424754627"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <h5>Farm Experiences</h5>
+                </div>
+            </div>
+            <!-- Single Benefits Area -->
+            <div class="col-12 col-sm-4 col-lg">
+                <div class="single-benefits-area wow fadeInUp mb-50" data-wow-delay="500ms">
+                    <img src="{% static 'img/core-img/xcereals.png.pagespeed.ic.e32V5m2N4I.png' %}" alt=""
+                        data-pagespeed-url-hash="3964137570"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <h5>100% Natural</h5>
+                </div>
+            </div>
+            <!-- Single Benefits Area -->
+            <div class="col-12 col-sm-4 col-lg">
+                <div class="single-benefits-area wow fadeInUp mb-50" data-wow-delay="700ms">
+                    <img src="data:image/png;base64,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"
+                        alt="" data-pagespeed-url-hash="865841150"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <h5>Farm Equipment</h5>
+                </div>
+            </div>
+            <!-- Single Benefits Area -->
+            <div class="col-12 col-sm-4 col-lg">
+                <div class="single-benefits-area wow fadeInUp mb-50" data-wow-delay="900ms">
+                    <img src="data:image/png;base64,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"
+                        alt="" data-pagespeed-url-hash="3545498028"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <h5>Organic food</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Famie Benefits Area End ##### -->
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- About Us Content -->
+            <div class="col-12 col-md-8">
+                <div class="about-us-content mb-100">
+                    <!-- Section Heading -->
+                    <div class="section-heading">
+                        <p>About us</p>
+                        <h2><span>Let Us</span> Tell You Our Story</h2>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAAUCAMAAACau7LCAAAABGdBTUEAALGPC/xhBQAAAf5QTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Ei4eHhxaVlvQAAAKh0Uk5TAAELBQMCBBAZFA0GEjoJO4K32uPf17yhcUUaLtNpFQgvrfr86ruIX0QnGxgcKlPOoHJDLSQWWOXw4uDY6bL75NbBn01R8ui9jYyatPhXm/OXDCbcxlkoCl1whsX3sP79opbJVDB9s9vu9fbxwGJBPWSs7T4rmGpoc1UzDjF0lYrsv6vDbYuJxHdnF27vTyGd6/kRJYU1ZXx5XA+u1M/HuJBjILEfSnUHisJCGQAAAd5JREFUSMdjYGSAAjiDiZkRTQTIZGFmReJSCTAyonCAXBZWdCVsbGzMbNS3Gqc72Dk4uSAsNm5mFtpYzMPLh/AyFDDzCwgKCYuIiolLSEqx0M7D0jKycvKo8augqLQCBpRVVNXUNTS1tLR1dKlut96KFfoGhkbGJqYwETPzFejAwtLK2saW6nYLgA23s3dwdHIGC7i4Quxzc3fy8PTytoaFgY8v1e32Q/jOPyCQgSEoGMwOCQ0L5zSKiIzyio6ByMZyU91uA7DBcfHKykAqgZslEcRNSuZMSU1Lz8jMyrTIjgeryNCgflrzAJuck5uXX1BYtKK4JBvIK5WXSlRCjfH4Mgbqp/dysNGOFZVV1Qw17rVlQE4dg3MwemqrR9G0kiqAoaYBFtuNtZoMJU0rVjRztWSi2Rzfyk2L/M0mgLBCpE2ufYVVSQe6p/07WWhTuHQlIdniKLxCgqG7B9VqoV6alWx9/RMmAm1QyooBJfWcSQyMk6c4+MMs9rGK0qFZ/QHEU6dNnzKjfGZEpOAKn0qwyKxegdlJc+bOm79g4SKMSpa6lsMA3+J2NqAApFapXqIdiKSGlYVWdkNbBkuXYfUeI0o1RxuwXI4DJSgYaRbaGL5j4WJEtQvoV0baNVgA44oMIv0gP8wAAAAASUVORK5CYII="
+                            alt="" data-pagespeed-url-hash="1557819204"
+                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                    <p>Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity. Organizations regulating organic products may restrict the use of certain pesticides and fertilizers in the farming methods used to produce such products. Organic foods typically are not processed using irradiation, industrial solvents, or synthetic food additives..</p>
+                    <a href="#" class="btn famie-btn mt-30">Read More</a>
+                </div>
+            </div>
+            <!-- Famie Video Play -->
+            <div class="col-12 col-md-4">
+                <div class="famie-video-play mb-100">
+                    <img src="{% static 'img/bg-img/x6.jpg.pagespeed.ic.Innbqdbbgz.jpg' %}" alt=""
+                        data-pagespeed-url-hash="988909679"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <!-- Play Icon -->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+<!-- ##### Services Area Start ##### -->
+<section class="services-area d-flex flex-wrap">
+    <!-- Service Thumbnail -->
+    <div class="services-thumbnail bg-img jarallax"
+        style="background-image:url({% static 'img/bg-img/x7.jpg.pagespeed.ic.aNXlb2Zx38.jpg' %})"></div>
+    <!-- Service Content -->
+    <div class="services-content section-padding-100-50 px-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading">
+                        <p>What we do</p>
+                        <h2><span>Our Produce</span> Is Mainstay For Us</h2>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAAUCAMAAACau7LCAAAABGdBTUEAALGPC/xhBQAAAf5QTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Ei4eHhxaVlvQAAAKh0Uk5TAAELBQMCBBAZFA0GEjoJO4K32uPf17yhcUUaLtNpFQgvrfr86ruIX0QnGxgcKlPOoHJDLSQWWOXw4uDY6bL75NbBn01R8ui9jYyatPhXm/OXDCbcxlkoCl1whsX3sP79opbJVDB9s9vu9fbxwGJBPWSs7T4rmGpoc1UzDjF0lYrsv6vDbYuJxHdnF27vTyGd6/kRJYU1ZXx5XA+u1M/HuJBjILEfSnUHisJCGQAAAd5JREFUSMdjYGSAAjiDiZkRTQTIZGFmReJSCTAyonCAXBZWdCVsbGzMbNS3Gqc72Dk4uSAsNm5mFtpYzMPLh/AyFDDzCwgKCYuIiolLSEqx0M7D0jKycvKo8augqLQCBpRVVNXUNTS1tLR1dKlut96KFfoGhkbGJqYwETPzFejAwtLK2saW6nYLgA23s3dwdHIGC7i4Quxzc3fy8PTytoaFgY8v1e32Q/jOPyCQgSEoGMwOCQ0L5zSKiIzyio6ByMZyU91uA7DBcfHKykAqgZslEcRNSuZMSU1Lz8jMyrTIjgeryNCgflrzAJuck5uXX1BYtKK4JBvIK5WXSlRCjfH4Mgbqp/dysNGOFZVV1Qw17rVlQE4dg3MwemqrR9G0kiqAoaYBFtuNtZoMJU0rVjRztWSi2Rzfyk2L/M0mgLBCpE2ufYVVSQe6p/07WWhTuHQlIdniKLxCgqG7B9VqoV6alWx9/RMmAm1QyooBJfWcSQyMk6c4+MMs9rGK0qFZ/QHEU6dNnzKjfGZEpOAKn0qwyKxegdlJc+bOm79g4SKMSpa6lsMA3+J2NqAApFapXqIdiKSGlYVWdkNbBkuXYfUeI0o1RxuwXI4DJSgYaRbaGL5j4WJEtQvoV0baNVgA44oMIv0gP8wAAAAASUVORK5CYII="
+                            alt="" data-pagespeed-url-hash="1557819204"
+                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-50">
+                    <p>Demand for organic foods is primarily driven by consumer concerns for personal health and the environment.[5] Research shows that even highly processed organic foods such as pizza, ice cream, and cereal can be perceived as healthier than the non-organic versions, depending on the marketing messages that are used to promote them.[6] Nevertheless, from the perspective of science and consumers, there is insufficient evidence in the scientific and medical literature to support claims that organic food is either safer or healthier to eat than conventional food.</p>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="100ms">
+                        <!-- Service Title -->
+                        <div class="service-title mb-3 d-flex align-items-center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAeCAMAAAB+ITwmAAAABGdBTUEAALGPC/xhBQAAAh9QTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Ei99l3ewAAALR0Uk5TACye3+e+XiCV3OjEZ3rCuc8OVse44d0ZgIE59uqYAy398gEaiyWhDKyNDenNeOWlKik9Sh4LCO0v+bN2cSROBRDuMYr4FN5lZobrsHQGHVDL/K4JjH7Qu5BZt9hGYf5zOtISItHDIbag85dN+mDBE/fOmzMynEtFwI6tskQ7otpdQY/k05kRZIgoFeCofQRwk3uWagc8XzgKbQKHWPDbPpEuglPG1jTMNTYwJtWaVz/sN1TxBBfkuAAAAiBJREFUOMt9k+lbzGEUhu+mbUalkopS2phJCqPQJEkzaRuSVAhRJEtpsYYkJNmJLKHs+/b8gT78fjMp5fn0vOe6r/dc57zPC34FWAKDgkOAUKttTlg4/ypCmhsZpKjoeVLM/FjFxU8nFmghQELiIiUlA4tTUtOmEunKMMwSLTWMXY6piFWmCfEZMrVsCpK1HIDkbClnxUoAVsnJ6lwfkLdmbTDAuny5ChzSeoBCpdu1AaAINhZvKnEDHpXmAmRoM1Amyo2uFZVUybtFW6F6m3lrjfIgR5bE7O21LijQjqg6qFdDhvz70k52abfkkGKARmlPWuVeSYrdZyLFFdXFTfsl1R6AZmuLdNCtqkPgadVhY42S2o5I0lHgmCqPu9TuBeg40alwaFVXd3rPSSmm/JQHOO2BuDMAOM+eo1dYdB6AMl3wr+2ijNfos0KTknSJ/ssAA1d8hFdXgRA71/Ig2a0GGOwDuK5kE2nUEHTqBgBFGgag/ibc0m0TuSMIk9M43FUzAPd0n/YUX6MHeujSiOGHVGVWH6lLBf5AaliPTW9T5KhpnyhwMgg2xQNPgWd6rlKj6Bx74ZlEnIqgx9YBL/WK8UEAJhTm/TtP4cpSyuvsNwoyC6FvNTEt2+/eyy259cE3Y9vHf7+IffwTnXXRAcDnL/rKzOqW/ZsSyFTq91kIBn6ARfkqmQ0gVz/51aLgwlkJ+tU7puoR/qNRx++aGYE/auevbhkAU8cAAAAASUVORK5CYII="
+                                alt="" data-pagespeed-url-hash="2129372929"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <h5>Fruit &amp; Vegetable</h5>
+                        </div>
+                        <p>Intiam eu sagittis est, aster cosmo lacini libero. Praesent dignissim sed odio velo
+                            aliquam manta legolas. </p>
+                    </div>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Service Title -->
+                        <div class="service-title mb-3 d-flex align-items-center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAYCAMAAACoeN87AAAABGdBTUEAALGPC/xhBQAAAbNQTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7EiF2Pg+QAAAJB0Uk5TAHn3xzAqv/qC0o9bffFdUt1uX7XZBsUWXsIfoTwthhunpifRIZKz2vjvwA/nhWutYigiTTo7xMb+B7dHz+Ts8t6raAE4EJcEMwyDsA05/NV3e06kZmNsepqJdUXWWM4RExIpqUY2LFDYYVXNMWRlUwlRN1xKWhVxsnYaVNDm9vB4LuucgIyL3CWEc+7p1C+BUnZ9xQAAAYtJREFUKM+9klVbw0AQRQdtKa6luEPR4sVKseIeihPci7u7y/3JZLPZUh7gkXmZPXfPZidfQsTLyxvw8dWA/PwBnZ5+VAAMgUHBCOEUirDwiEhERXsYMTDGmuIoHgmMEpGUnJJKaUj/NgKRkYks5ZrsHIbm3DzkFzC10K14F1lQzBYlKCUqQ3lwhZpXWtVWVY0K1CCVy7V1tnp7QyOaVGqGCaYWZQwH0NrWzpUOdKZA39WtPb5H2ewl9FG/bWBQywpAZNUHSRoik4ZAcNKw2XdEe78kRcGo5BSKgWIVZYzGkSgGD7MRTdQLKsYkSapCU5g0ytMz8uwc5okWUL0oz0zLxiUsk1CqcqHVCju8Kmgtz60QrVsk14a0ucUvaN2WNlySZYet3crv9a/K7t/KnqJE7XsEB4dHWccnHsHpGchxjosFETiBSzNwJfjahptb9pPVYocnd3AYieR7PIgPYG/T5Eed2p7wzPkFfOf1zX1hMlysvUME1nw+6cf3UPbKPaV0BsGfVsaRdSp8AQPweOITt27FAAAAAElFTkSuQmCC"
+                                alt="" data-pagespeed-url-hash="2423872850"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <h5>Meat &amp; Eggs</h5>
+                        </div>
+                        <p>Intiam eu sagittis est, aster cosmo lacini libero. Praesent dignissim sed odio velo
+                            aliquam manta legolas. </p>
+                    </div>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="500ms">
+                        <!-- Service Title -->
+                        <div class="service-title mb-3 d-flex align-items-center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAMAAAANmfvwAAAABGdBTUEAALGPC/xhBQAAAblQTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Ei08oYFQAAAJJ0Uk5TAA7a7TcjqXWAaiE2aSBTEWYfXB47OHCiq1YpVPj2TiWgmdDq98JaGS2s1RvXAq9NM2O6obnHTF9yiRfj2FJogjkklQd8SSKjMLGKDJh0uGJdRkDfjypE5tvG9OzS3cOOvrWo6Lv6YSYc8vHRbwZRy0Lv+xRlt1nipSe/DT123PPFEJ20iF7rW22etmd/hnPNMv1Bhcf8AAABx0lEQVQ4y6XS2VdSYRTG4Tc1QUo7GRYklNKAiRWIOFGplCZRkE0q0JyUDTbZoA3aZGXz7y/uAkRY55zVRe/Nt/dZz/ftc7ElaUMNANTWyS4bqXc4HA4nDbbExSZJEpttSSNNkrQF43/IVpr/NWgb7pbtLTs8eG3JTlze+lafv/SYVXaxuziozZa0UzwDe2zJ3n3Fcz9B2zkdpYoDNsTfuVY5abQUTkLrI7usxEEOrTeHCVuQCJUd3RYkSk+slN6+/oGqC6FBSVJnvOtIKUePDQ0zUgbBBByXJE5U3gszWqrGTkKCgCTRX0nGaJUkjSfhVErjnJbEmeod9UqqS+N3SJIynJVwVJIRJnQuyfmmtQ8XuGgil4aAnuTk1HRtNpvLx7hsIobvytV2uAbp6zeiN6duYSKRmYJC3NYdOqTEbC5+10T67nH/QXNKg8zpIROPHj8xkcJ0nKfzzyLUSL6M9Nxi0OTci5fBhbbFV5LrtTRgJpm8hzelzv12oZsl878sky6378KBRTMp5N5LUuoDfCyukPhUtRvMz4xKUs3K5y98ldSLWDW+lWN8p8G3ahhGlB/D7hg/DcODflGVld8eAGb/wFIWIP8X02eU1LZ/QTgAAAAASUVORK5CYII="
+                                alt="" data-pagespeed-url-hash="2718372771"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <h5>Milk &amp; Cheese</h5>
+                        </div>
+                        <p>Intiam eu sagittis est, aster cosmo lacini libero. Praesent dignissim sed odio velo
+                            aliquam manta legolas. </p>
+                    </div>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-service-area mb-50 wow fadeInUp" data-wow-delay="700ms">
+                        <!-- Service Title -->
+                        <div class="service-title mb-3 d-flex align-items-center">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAiCAMAAAAJbCvNAAAABGdBTUEAALGPC/xhBQAAAgdQTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7EiZUwqPwAAAKx0Uk5TAISQso6IwGrhw30N/t/ZxekZgc71fHvw25jd9PLz7uoqAkx4PoYbgCH3pB2ZRtwSpr4ryIomnjn4vTB1Z04MfroJtPne9kNwl/GhzQNcGFbC/PoHaR887Jva1AhUazVb4hZfQFBB5WJC1mTGBNedBczEIzGuoieRbkmjgxNL6Kip5koGytNVtlfSd+dYy2+NC116bRBgWsHJYRdore95KfuPLCJxx7xeLmUcIO9ZFE4AAAIQSURBVDjLfdNXU5NRFIXhFxFpAcQAURKRYkG60oyEJgEUlRJQRKkKaAggxK5gV5oFxF5REdv6kV5kRsxH4r7bs545bfYBvwqR1vGfCtX6MG0InocrAiIVFSyPNsXEQtxGxQcBm2ROSEyybNaWICDZapOkrSnbAuepSksXJGSg7QHBDu3cpczM3VnZyjFEuXlmc1J+gf7WHgPYKxVKKiouUWnpPvv+MpOj3F+UmciPslgq0k1graRKUrW/UBVUH1CeamrkVG1dvaL9QZjSgIM6lNMQo8NHOKoKf9CoJoDmFnDagHAjwBUK0Kq2YzoeENjbAThR23GSgKCo5VRIMcRLnYFBl6tbPUCv+gKD0zqjfqDZRDAwoHIgchCAtjXgrM4pF4hzA+AwPhRDSlUP4PGBeg0bwIBaIyMAzwgAozIOw3mFIA+M+YBtfM24OOS9cHHUcWnEd+TLxjyfK8rl6rXrbqBfN5jwiydvSrdu687de/cfxD8c01SDlDL97/IzbbO2uUcFkkzS4yeDrihHoWZXP9RTgBnrPJ0R7QsT871OgEQ98+WLWuT5i5cwpUZeuRnWa5h+85YeVQK8U1e2XZKyvO9dEyWhFZYqb44kebwLmgWHrOP68NH7KWxJsYoZM7vVIX3+8nV5Tt9StIxTWpn07dW04vsVzd99fd3Ukub48fPX6nV+Z8QmVxav9n1D3X8AQna3es0u7ckAAAAASUVORK5CYII="
+                                alt="" data-pagespeed-url-hash="3012872692"
+                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <h5>Rice &amp; Corn</h5>
+                        </div>
+                        <p>Intiam eu sagittis est, aster cosmo lacini libero. Praesent dignissim sed odio velo
+                            aliquam manta legolas. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Services Area End ##### -->
+<!-- ##### Our Products Area Start ##### -->
+<section class="our-products-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Section Heading -->
+                <div class="section-heading text-center">
+                    <p>Featured Products</p>
+                    <h2><span>Our Product</span> Are Highest Quality</h2>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAAAUCAMAAAAUTTn7AAAABGdBTUEAALGPC/xhBQAAAf5QTFRFAAAAd7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Eid7Ei4eHhxaVlvQAAAKh0Uk5TAAELBQMCBBAZFA0GEjoJO4K32uPf17yhcUUaLtNpFQgvrfr86ruIX0QnGxgcKlPOoHJDLSQWWOXw4uDY6bL75NbBn01R8ui9jYyatPhXm/OXDCbcxlkoCl1whsX3sP79opbJVDB9s9vu9fbxwGJBPWSs7T4rmGpoc1UzDjF0lYrsv6vDbYuJxHdnF27vTyGd6/kRJYU1ZXx5XA+u1M/HuJBjILEfSnUHisJCGQAAAepJREFUSMdjYKAyYMRgMDEzookAmSzMrIwMgx0wMqJwgFwWVnQlbGxszGyD3ys4/cXOwckFYbFxM7MMDY/w8PIhogQKmPkFBIWERUTFxCUkpViGToRIy8jKyaPmDwVFpRUwoKyiqqauoamlpa2jO+j9ordihb6BoZGxiSlMxMx8BTqwsLSytrEd9H4RADvWzt7B0ckZLODiCnG/m7uTh6eXtzUsjnx8B71f/BCh7x8QyMAQFAxmh4SGhXMaRURGeUXHQGRjuQe9XwzADo2LV1YGUgncLIkgblIyZ0pqWnpGZlamRXY8WEWGxuDP+x5gl+bk5uUXFBatKC7JBvJK5aUSlVBzTHwZA/XLs5VUAQjzysFOdayorKpmqHGvLQNy6hicg9Fzfz1NHUElUNMAyy2NtZoMJU0rVjRztWSi+SS+dfBnFlCtLoBwskibXPsKq5IO9Ejx72QZGpVlVxKSqx2FV0gwdPegekWod8jU/H39EyYCXayUFQMqynImMTBOnuLgD/OIj1WUzpBpTwLx1GnTp8wonxkRKbjCpxIsMqtXYHbSnLnz5i9YuAijUzC4PQMDfIvb2YACkFZm9RLtQCQ1rCxDxS/QntbSZViDnxGlGT00wHI5Dmx9zSHmC0hHmIsRrd8MjBDadSgBTLM6WNiIrLoAAAAASUVORK5CYII="
+                        alt="" data-pagespeed-url-hash="3240513832"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for i in product %}
+            <!-- Single Product Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Product Thumbnail -->
+                    <div class="product-thumbnail">
+                        <img src="/media/{{i.product_photo}}" alt="" style="height: 300px;">
+                        <span class="product-tags">Hot</span>
+                        
+                    </div>
+                    <!-- Product Description -->
+                    <div class="product-desc text-center pt-4">
+                        <a href="#" class="product-title">{{i.product_name}}</a>
+                        <h6 class="price">Rs. {{i.product_price}}</h6>
+                        <a href="/product-detail/{{i.id}}" class="btn btn-success">View Detail</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        
+    </div>
+</section>
+<!-- ##### Our Products Area End ##### -->
+
+
+{% endblock %}

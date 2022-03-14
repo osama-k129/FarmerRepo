@@ -1,0 +1,208 @@
+
+
+
+{% extends 'adminapp/admin-base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  
+.wrapper {    
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.form-signin {
+  max-width: 300px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #eee;
+  border: 3px dotted rgba(0,0,0,0.1);  
+  }
+
+.form-signin-heading {
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  position: relative;
+  font-size: 20px;
+  height: auto;
+  padding: 10px;
+}
+
+input[type="text"] {
+  margin-bottom: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding:10px;
+}
+
+
+input[type="number"] {
+  margin-bottom: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding:10px;
+}
+
+
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  font-size: large;
+  border:1px solid black;
+  padding:7px;
+}
+
+
+.colorgraph {
+  height: 7px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+</style>
+<!---->
+
+
+<!--
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form action="success" method="POST">
+        {% csrf_token %}
+        <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_OLzTZNENU3vq1q" data-amount={{cust.pay_amt}} data-name="APS Company" data-description="Purchase Description" data-image="vk.jpg" data-netbanking="true" data-description="No way"
+            data-prefill.name="{{cust.customer_name}}" order_id={{orderId}} data-buttontext="Pay with Razorpay" data-prefill.email={{cust.customer_email}} data-prefill.contact={{cust.customer_mobile}} data-notes.shopping_order_id={{cust.id}}>
+        </script>
+
+
+
+
+        <input type="hidden" name="shopping_order_id" value={{cust.id}}>
+    </form>
+</body>
+
+</html>
+
+
+-->
+
+
+
+
+
+       
+
+
+
+
+    <!-- <div style="margin-left: 25%;margin-right: 25%;">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Your Name</label>
+            <input type="text" required class="form-control" placeholder="Enter Your Full Name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Address</label>
+            <input type="text" required class="form-control"  placeholder="Enter Address">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Mobile Number</label>
+            <input type="number" required class="form-control"  placeholder=" Enter Mobile Number">
+        </div>
+
+        
+
+
+        <input type="hidden" value="{{pay_amt}}" class="validate" name="paid_amount">
+        <input type="hidden" value="{{course}}" class="validate" name="course_name">
+        <input type="hidden" value="{{course_id}}" class="validate" name="course_id">
+        <input type="hidden" custom="Hidden Element" name="hidden">
+    </div>
+ -->
+
+    <center>
+        <div class = "container" style="padding-left:25%;padding-right:25%">
+            <form action="{% url 'success' %}" method="POST">
+            <div class="wrapper">
+                <h2 style="text-align: center;color: #f0776c;">{{course}}<br></h2>
+                
+                <h4 style="text-align: center;color: #f0776c;"><br> Price:  {{paisa}} Rs. )</h4>    <!--get_in_rupees-->
+                <h3 class="form-signin-heading">Fill Below Details.</h3>
+                <hr class="colorgraph"><br>
+                
+                <input style="font-size: 16px;" type="text" class="form-control" name="name" placeholder="Enter your Full Name" required autofocus="" />
+                <input style="font-size: 16px;" type="text" class="form-control" name="address" placeholder="Enter your Address" required />
+                <input style="font-size: 16px;" type="number" class="form-control" name="mobile" placeholder="Enter your Mobile" required />
+
+                
+                <input type="hidden" value="{{pay_amt}}" class="validate" name="paid_amount">
+                <input type="hidden" value="{{course}}" class="validate" name="course_name">
+                <input type="hidden" value="{{course_id}}" class="validate" name="course_id">
+                <input type="hidden" custom="Hidden Element" name="hidden">
+                
+            
+            </div>
+
+            <script src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="rzp_live_w1RJIJNnHcqCdX"
+            data-amount={{pay_amt}}
+            data-currency="INR"
+            data-order_id={{orderId}}
+            data-buttontext="PAY NOW"
+            data-name="TOPPROJECTWORLD"
+            data-description="Project buy"
+            data-image="{% static 'images/logo.jpg' %}" 
+            data-prefill.name={{customer_name}}
+            data-prefill.email={{customer_email}}
+            data-prefill.contact={{customer_mobile}}
+            data-theme.color="#F37254">
+            </script>
+    
+
+        </form>  
+        </div>
+        </center>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="rzp_live_w1RJIJNnHcqCdX"
+        data-amount={{pay_amt}}
+        data-currency="INR"
+        data-order_id={{orderId}}
+        data-buttontext="PAY NOW"
+        data-name="TOPPROJECTWORLD"
+        data-description="Project buy"
+        data-image="{% static 'images/logo.jpg' %}" 
+        data-prefill.name={{customer_name}}
+        data-prefill.email={{customer_email}}
+        data-prefill.contact={{customer_mobile}}
+        data-theme.color="#F37254">
+    </script> -->
+
+
+
+
+
+
+{% endblock %}

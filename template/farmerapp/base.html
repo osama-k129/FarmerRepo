@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{% block topfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>Famie - Farm Services &amp; Organic Food Store</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/xfavicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'css/font-awesome.min.css' %}">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'A.style.css.pagespeed.cf.rjlf8ud5Vx.css' %}">
+</head>
+{% endblock %}
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    {% block topbar %}
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta">
+                                <p>Welcome to <span>Farmie</span>, we hope you will enjoy our products and have good
+                                    experience</p>
+                            </div>
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta text-right">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                    title="ashishmeshram844@gmail.com"><i class=""
+                                        aria-hidden="true"></i> <span>Email: myemail@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+91 705 755 9583"><i
+                                        class="" aria-hidden="true"></i> <span>Call Us: +91 1236547898
+                                        </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar Area -->
+        <div class="famie-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="famieNav">
+                        <!-- Nav Brand -->
+                        <a href="{% url 'index' %}" class="nav-brand">
+                           Farmers
+                        </a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    
+                                    <li><a href="{% url 'our-product' %}">Our Product</a></li>
+
+                                    <li><a href="{% url 'bid_pro' %}">Bidding Products</a></li>
+                                    
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                                    <!-- <li><a href="{% url 'bidding_list' %}">Biddings</a></li> -->
+
+                                    {%if user.is_authenticated %}
+                                    {% if user.is_staff %}
+                                    <li><a href="{% url 'dashboard' %}" class="btn btn-success text-white">Farmer Dashboard</a></li>
+                                    {% else %}
+                                    <li><a href="{% url 'buyer-dashboard' %}" class="btn btn-success text-white">Buyer Dashboard</a></li>
+                                    {% endif %}
+                                    <li><a href="{% url 'logout' %}" class="btn btn-success text-white">Logout</a></li>
+                                    {% else %}
+                                    <li><a href="{% url 'loginpage' %}" class="btn btn-success text-white">Login</a></li>
+
+                                    {% endif %}
+                                
+                                
+                                
+                                </ul>
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="icon_search" aria-hidden="true"></i>
+                                </div>
+                                <!-- Cart Icon -->
+                                <!-- <div id="cartIcon">
+                                    <a href="#">
+                                        <i class="icon_cart_alt" aria-hidden="true"></i>
+                                        <span class="cart-quantity">2</span>
+                                    </a>
+                                </div> -->
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="{% url 'search_item' %}" method="GET">
+                       
+                            <input type="search" name="search" id="search"
+                                placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    {% endblock %}
+
+
+
+
+    {% block content %}
+    <!-- ##### Hero Area Start ##### -->
+  content
+
+    <!-- ##### Hero Area Start ##### -->
+    {% endblock %}
+
+    {% block footer %}
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Main Footer Area -->
+        <div class="main-footer bg-img bg-overlay section-padding-80-0"
+            style="background-image:url(img/bg-img/x3.jpg.pagespeed.ic.pDyk09G5jG.jpg)">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-80">
+                            <a href="#" class="foo-logo d-block mb-30"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAAYCAMAAADpjKKEAAAABGdBTUEAALGPC/xhBQAAAF1QTFRFAAAAd7Eid7Eid7Ei//7+//7+//7+//7+d7Eid7Eid7Eid7Eid7Ei//7+//7+//7+d7Eid7Ei//7+d7Eid7Eid7Ei//7+//7+d7Ei//7+//7+//7+//7+d7Ei//7+Ki/qSQAAAB10Uk5TADNEETNEIhG7iGbuIrvdd92qmVWZd+6IzGZVqsyhoBRdAAACBElEQVRIx6WW2YKCMAxFCwVkXxRQnMH//8wx6ZaGZRDzoq3xHnK7BBGEXggVEgdSuCB5AZmOYohELKbIICHTNi4inb3Qf8hwkBM9mldkpZmuXhA1SUxw5kV+b0imjXiD3OKg2yC/2blHfsUu8foVOdAjuUWe55tHrnjJB8k9X+dMy+c+WeUNaEghPT1bdLNHvvJ1HgQL0C58u2le754K9EbQ1D9dxj1yI8S6ookQlAey7CxPwlNlrhIgJa7k8TwZakolWU2eB4PU6V1d0fX76/08ucC5B6zsIXIEqAsMJzhi8WnyDaotBdhdrOe1dqD0rCqUPH1ATgcTpTH7IUTp2U3JuAUCogelju+in/i5Ta4aExM/p6EzW/h2O3LQk1tGK9fqA0Z3ER84z9UaWZstfLvZTfKQnnKDV2isNvlpsjab2e3nZdJXxmM8/ag9/gF5WNnZgtlNyb1tGFYZDlatL7P4wB0WrZDR7BzvyY7YnZLFb+WCbK7rX7FH3j9V/XprMHl4v2ULsjFz+oJcMHLP8jp7Bjy92DXqk+ScgY3dNg/3XSsXyrjKzRfkzuxs26dvLC+jfju9yV6h58jYJwavXfYsDzuV8dvpwcFSbWObXFc2Ik7OzTXiXhEK/oQD8ZtU8mya5B/y4p1k2DBb2x1yb9qZdQw/TpGZ2WqnZ5yMJ0u1jPPkP/8kjhIXa40oAAAAAElFTkSuQmCC"
+                                    alt="" data-pagespeed-url-hash="1052440542"
+                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                            <p>Lorem ipsum dolor sit amet, consecte stare adipiscing elit. In act honcus risus atiner
+                                Pellentesque risus.</p>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-pin" aria-hidden="true"></i><span>115 wadi Nagpur India</span>
+                                </p>
+                                <p><i class="fa fa-envelope"
+                                        aria-hidden="true"></i><span>ashishmeshram844@gmail.com</span></p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 7057559583</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-80">
+                            <h5 class="widget-title">QUICK LINK</h5>
+                            <!-- Footer Widget Nav -->
+                            <nav class="footer-widget-nav">
+                                <ul>
+                                    <li><a href="#">Purchase</a></li>
+                                    <li><a href="#">Policities</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Return</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Payments</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Guide</a></li>
+                                    <li><a href="#">Standard</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Brands</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                   
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-80">
+                            <h5 class="widget-title">STAY CONNECTED</h5>
+                            <!-- Footer Social Info -->
+                            <div class="footer-social-info">
+                                <a href="#">
+                                    <i class="" aria-hidden="true"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#">
+                                    <i class="" aria-hidden="true"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#">
+                                    <i class="" aria-hidden="true"></i>
+                                    <span>Pinterest</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copywrite Area  -->
+        <div class="copywrite-area">
+            <div class="container">
+                <div class="copywrite-text">
+                    <div class="row align-items-center">
+                        
+                        <div class="col-md-6">
+                            <div class="footer-nav">
+                                <nav>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Produce</a></li>
+                                        <li><a href="#">Practice</a></li>
+                                        <li><a href="#">Products</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    <!-- ##### Footer Area End ##### -->
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jquery 2.2.4  -->
+    <script src="{% static 'js/jquery.min.js.pagespeed.jm.pJg2D_p7ze.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js+bootstrap.min.js.pagespeed.jc.nEOvc2PfwS.js' %}"></script>
+    <script>eval(mod_pagespeed_vHXKvAFJhe);</script>
+    <!-- Bootstrap js -->
+    <script>eval(mod_pagespeed_1vTqLFw1Px);</script>
+    <!-- Owl Carousel js -->
+    <script
+        src="{% static 'js/owl.carousel.min.js+classynav.js+wow.min.js+jquery.sticky.js+jquery.magnific-popup.min.js+jquery.scrollup.min.js.pagespeed.jc.qNVLScZJrj.js' %}"></script>
+    <script>eval(mod_pagespeed_B7F$vbKkQ$);</script>
+    <!-- Classynav -->
+    <script>eval(mod_pagespeed_HuuE5e0zXC);</script>
+    <!-- Wow js -->
+    <script>eval(mod_pagespeed_yDYrrVxm5I);</script>
+    <!-- Sticky js -->
+    <script>eval(mod_pagespeed_td53TCNGvA);</script>
+    <!-- Magnific Popup js -->
+    <script>eval(mod_pagespeed_GCAHO6h2$i);</script>
+    <!-- Scrollup js -->
+    <script>eval(mod_pagespeed_M_OMlSEZEP);</script>
+    <!-- Jarallax js -->
+    <script src="{% static 'js/jarallax.min.js+jarallax-video.min.js+active.js.pagespeed.jc.Pgprgh_M_R.js' %}"></script>
+    <script>eval(mod_pagespeed_$X6Hr8_6mj);</script>
+    <!-- Jarallax Video js -->
+    <script>eval(mod_pagespeed_4y$qQxhyiv);</script>
+    <!-- Active js -->
+    <script>eval(mod_pagespeed_2P$lGKMt_6);</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-23581568-13');</script>
+</body>
+
+</html>

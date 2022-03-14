@@ -1,0 +1,131 @@
+{% extends 'farmerapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<div class="breadcrumb-area bg-img bg-overlay jarallax"
+style="background-image:url({% static 'img/bg-img/x18.jpg.pagespeed.ic.LOySKkCvTd.jpg' %})">
+<div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <div class="breadcrumb-text">
+                <h2>Bidding Product</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+<!-- ##### Our Products Area Start ##### -->
+<section class="our-products-area section-padding-100">
+<div class="container">
+   
+    <!-- ##### Shop Area Start ##### -->
+    <section class="shop-area section-padding-0-100">
+        <div class="container">
+           
+            <div class="row">
+                
+                <!-- Shop Products Area -->
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="row">
+                        
+                        
+
+
+
+
+
+
+                        {% for i in bid_data %}
+                        {% if i.bidding_date ==  today %}
+                         <!-- Single Product Area -->
+                         <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-product-area mb-50" >
+                                <!-- Product Thumbnail -->
+                                <div class="product-thumbnail">
+                                    <!-- <img src="/media/{{i.product_photo}}" alt="" > -->
+
+                                    <img src="/media/{{i.product.product_photo}}" alt="" style="height: 300px;">
+                                    <!-- Product Tags -->
+                                    {% if i.complete %}
+                                    <span class="product-tags bg-danger">Bid completd</span>
+                                    {% else %}
+
+                                    <span class="product-tags bg-success">Start On : {{i.bidding_date}} {{i.bidding_start_time}} - {{i.bidding_end_time}}</span>
+
+                                    {% endif %}
+                                    <!-- Product Meta Data -->
+                                   
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-desc text-center pt-4">
+                                    <a href="#" class="product-title">{{i.product.product_name}}</a>
+                                    <h6 class="price">Quantity : {{i.product.product_quantity}}</h6>
+                                    <h6 class="price">Starting Price =  {{i.min_price}} Rs. </h6>
+                                    <a href="{% url 'bid_pro_detail' i.id %}" class="btn btn-success">View Detail</a>
+                                    {% if i.bidding_date == today %}
+                                    <h3 class="btn btn-success">Started</h3>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+
+                        {% if i.bidding_date <  today %}
+
+                        {% else %}
+                       
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-product-area mb-50" >
+                                <!-- Product Thumbnail -->
+                                <div class="product-thumbnail">
+                                    <!-- <img src="/media/{{i.product_photo}}" alt="" > -->
+
+                                    <img src="/media/{{i.product.product_photo}}" alt="" style="height: 300px;">
+                                    <!-- Product Tags -->
+                                    {% if i.complete %}
+                                    <span class="product-tags bg-danger">Bid completd</span>
+                                    {% else %}
+
+                                    <span class="product-tags bg-success">Start On : {{i.bidding_date}} {{i.bidding_start_time}} - {{i.bidding_end_time}}</span>
+
+                                    {% endif %}
+                                    <!-- Product Meta Data -->
+                                   
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-desc text-center pt-4">
+                                    <a href="#" class="product-title">{{i.product.product_name}}</a>
+                                    <h6 class="price">Quantity : {{i.product.product_quantity}}</h6>
+                                    <h6 class="price">Starting Price =  {{i.min_price}} Rs. </h6>
+                                    <a href="{% url 'bid_pro_detail' i.id %}" class="btn btn-success">View Detail</a>
+                                    {% if i.bidding_date == today %}
+                                    <h3 class="btn btn-success">Started</h3>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+  
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Shop Area End ##### -->
+</div>
+</section>
+<!-- ##### Our Products Area End ##### -->
+
+
+{% endblock %}

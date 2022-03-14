@@ -1,0 +1,78 @@
+{% extends 'adminapp/admin-base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add Product for Bidding</h1>
+                {% for i in messages %}
+                {{i}}
+                {% endfor %}
+
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Add Product for bidding
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form action="{% url 'save_bid_data' %}" method="POST" enctype="multipart/form-data">
+                                   {% csrf_token %}
+                                   <div class="form-group">
+                                    <label>Select Product for bidding</label>
+                                    <select class="form-control" name="select_product">
+                                        <option disabled>select Catagory</option>
+                                        {% for j in pro %}
+                                        <option value="{{j.id}}">{{j.product_name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Bidding Minimum Price</label>
+                                        <input type="number" class="form-control" name="min_price" placeholder="Enter minimum price for product">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Bidding date</label>
+                                        <input type="date" class="form-control" name="bidding_date" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Bidding Start Time</label>
+                                        <input type="time" class="form-control" name="bidding_start_time" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Bidding End Time</label>
+                                        <input type="time" class="form-control" name="bidding_end_time" placeholder="">
+                                    </div>
+                                    
+                                    <center>
+                                    <button type="submit" class="btn btn-success">ADD TO BID</button>
+                                    </center>
+                                </form>
+                            </div>
+                            <!-- /.col-lg-6 (nested) -->
+                            
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+
+
+
+{% endblock %}
+
+

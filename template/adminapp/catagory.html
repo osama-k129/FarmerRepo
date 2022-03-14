@@ -1,0 +1,108 @@
+{% extends 'farmerapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<div class="breadcrumb-area bg-img bg-overlay jarallax"
+style="background-image:url({% static 'img/bg-img/x18.jpg.pagespeed.ic.LOySKkCvTd.jpg' %})">
+<div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <div class="breadcrumb-text">
+                <h2>Our Product</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+<!-- ##### Our Products Area Start ##### -->
+<section class="our-products-area section-padding-100">
+<div class="container">
+   
+    <!-- ##### Shop Area Start ##### -->
+    <section class="shop-area section-padding-0-100">
+        <div class="container">
+           
+            <div class="row">
+                <!-- Shop Sidebar Area -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    
+                    <!-- Single Widget Area -->
+                    <div class="single-widget-area">
+                        <!-- Title -->
+                        <h5 class="widget-title">Catagories</h5>
+                        <!-- Cata List -->
+                        <ul class="cata-list shop-page">
+                            {% for i in cat %}
+                            <li><a href="/catagory/{{i.id}}">{{i.catagory_name}}</a></li>
+                           {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- Single Widget Area -->
+
+                    <!-- Single Widget Area -->
+                    <div class="single-widget-area">
+                        <!-- Title -->
+                        <h5 class="widget-title">FIlters</h5>
+                        <!-- Cata List -->
+                        <ul class="cata-list shop-page">
+                            <li><a href="{% url 'our-product' %}">All</a></li>
+                            <li><a href="{% url 'available_product' %}">Available</a></li>
+                            <li><a href="{% url 'sold_product' %}">Sold</a></li>
+                    
+                        </ul>
+                    </div>
+                    <!-- Single Widget Area -->
+                    
+                </div>
+
+                <!-- Shop Products Area -->
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="row">
+                        {% for i in products %}
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-product-area mb-50">
+                                <!-- Product Thumbnail -->
+                                <div class="product-thumbnail">
+                                    <img src="/media/{{i.product_photo}}" alt="" style="height: 300px;">
+                                    {% if i.sold %}
+                                    <span class="product-tags bg-danger">Sold</span>
+                                    {% else %}
+
+                                    <span class="product-tags bg-success">Available</span>
+
+                                    {% endif %}
+                                    <!-- Product Meta Data -->
+                                   
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-desc text-center pt-4">
+                                    <a href="#" class="product-title">{{i.product_name}}</a>
+                                    <h6 class="price">Quantity : {{i.product_quantity}}</h6>
+                                    <h6 class="price">Rs. {{i.product_price}}</h6>
+                                    <a href="/product-detail/{{i.id}}" class="btn btn-success">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+  
+                    </div>
+                    <!-- Pagination -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Shop Area End ##### -->
+</div>
+</section>
+<!-- ##### Our Products Area End ##### -->
+
+
+{% endblock %}

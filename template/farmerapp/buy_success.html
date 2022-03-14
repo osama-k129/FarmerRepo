@@ -1,0 +1,20 @@
+{% extends 'farmerapp/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="breadcrumb-area bg-img bg-overlay jarallax"
+style="background-image:url({% static 'img/bg-img/x18.jpg.pagespeed.ic.LOySKkCvTd.jpg' %})">
+<div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <div class="breadcrumb-text">
+                <h2>Product Order Placed  Successfully Please checkout your Dashboard</h2>
+                <a href="{% url 'buyer-dashboard' %}" class="btn btn-success">Goto Your Dashboard</a>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
